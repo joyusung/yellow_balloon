@@ -1,0 +1,1169 @@
+/* 외부 폰트 연결(눈누-노트산스) */
+@import url(http://fonts.googleapis.com/earlyaccess/notosanskr.css);
+
+*{margin: 0; padding: 0;}
+a{ text-decoration: none; color: #111; display: block;
+   font-family: 'Noto Sans KR', sans-serif;
+}
+
+li{list-style: none;}
+img{width: 100%;}
+header, section, footer, div{box-sizing: border-box;}
+header, section, footer{
+    width: 100%;
+    float: left;
+}
+body{font-family: 'Noto Sans KR', sans-serif;}
+body{overflow-x: hidden; position: relative;}
+/* 헤더 범위 지정 */
+header{
+    height: 150px;
+    background-color: #fff;
+    position: relative;
+    z-index: 100;
+}
+header > div{
+    width: 1760px;
+    margin: 0 auto;
+}
+/* 탑메뉴 */
+header .top_menu{
+    height: 50px;
+}
+header .top_menu .top_menu_list{
+    float: right;
+    line-height: 50px;
+}
+header .top_menu .top_menu_list div{
+    float: left;
+    margin: 0 10px;
+}
+header .top_menu .top_menu_list .member ul li{
+    float: left;
+    margin: 0 10px 0 0;
+}
+header .top_menu .top_menu_list .member ul li:last-child{
+    margin: 0 0 0 10px;
+}
+header .top_menu .top_menu_list div a{
+    font-size: 14px;
+}
+/* 메뉴(logo+navigation) */
+header .menu_area{
+    height: 100px;
+    position: relative;
+}
+header .menu_area > div{
+    float: left;
+    margin:0 20px;
+    margin-top: 50px;
+}
+header .menu_area .logo{
+    margin: 0;
+}
+header .menu_area nav > ul > li{
+    float: left;
+    margin:0 20px;
+}
+header .menu_area nav > ul > li > a{
+    font-weight: bold;
+    font-size: 18px;
+    transition: all 0.5s;
+}
+header .menu_area nav > ul > li:hover > a{
+    color: #d8823c; /*나중에 색변경 */
+}
+/* 왼쪽 주메뉴 */
+header .menu_area .menu1{
+    margin-left: 0;
+}
+header .menu_area .menu1 nav ul li{
+    margin-right: 80px;
+}
+header .menu_area .menu1 nav > ul > li:first-child{
+    margin-left: 0;
+}
+/* 로고 */
+header .menu_area .logo{
+    width: 180px;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    top: 35px;
+}
+/* 오른쪽 주메뉴 + 검색,전체메뉴*/
+header .menu_area .menu2{
+    float: right;
+    margin-right: 0;
+}
+header .menu_area .menu2 nav > ul > li:last-child > a{
+    color: blue; /*나중 색변경*/
+}
+header .menu_area nav,
+header .menu_area .search,
+header .menu_area .total_menu{
+    float: left;
+    margin: 10px;
+}
+header .menu_area .menu1 nav{
+    margin-left: 0;
+}
+header .menu_area .total_menu{
+    margin-right: 0;
+}
+header .menu_area .menu2 nav ul li{
+    margin-left: 50px;
+}
+/* 서브 */
+header .menu_area nav .sub{
+    position: absolute;
+    z-index: 30;
+    padding-top: 30px;
+    display: none;
+}
+header .menu_area nav .sub li a{
+    padding: 7px 0;
+    font-size: 14px;
+    position: relative;
+    display: inline-block;
+}
+header .menu_area nav .sub li a:after{
+    content: "";
+    width: 0;
+    position: absolute;
+    bottom: 5px;
+    left: 0;
+    height: 3px;
+    background-color: #fee540;
+    transition: all 0.5s;
+}
+header .menu_area nav .sub li:hover a:after{
+    width: 100%;
+} 
+
+/* 서브메뉴 배경 */
+header .sub_bg{
+    position: absolute;
+    z-index: 20;
+    left: 0;
+    top: 150px;
+    width: 100%;
+    height: 320px;
+    background-color: #fff;
+    box-shadow: 0 2px 2px #ddd;
+    display: none;
+}
+/* 검색영역 */
+header .search_area{
+    width: 100%;
+    height: 200px;
+    position: absolute;
+    top: 150px;
+    background-color: #ffe;
+    display: none;
+    z-index: 15;
+}
+header .search_area .search_in{
+    width: 650px;
+    height: 60px;
+    margin: 70px auto;
+    border-bottom: 3px solid #fee540;
+}
+header .search_area .search_in input{
+    width: 600px;
+    float: left;
+    font-size: 20px;
+    padding: 15px 0;
+    display: block;
+    border: none;
+}
+header .search_area .search_in a{
+    width: 30px;
+    padding: 10px;
+    background-color: #fff;
+    float:right;
+}
+/* input 입력창을 마우스로 클릭해서 포커스가 input에 있을 때 테두리 없앰 ✨중요✨*/
+header .search_area input:focus{
+    outline:none;
+}
+/* 검색영역 안의 닫기 버튼 */
+header .search_area > a{
+    width: 30px;
+    margin: 0 auto;
+}
+
+/* 본문 비주얼 */
+section.visual .swiper{
+    width: 94%;
+    margin: 80px auto;
+    overflow: visible;   
+}
+/* swiper슬라이드의 버튼 이미지 넣기 */
+section.visual .swiper-button-next{
+    right: -40px;
+}
+section.visual .swiper-button-prev{
+    left: -40px;
+}
+section.visual .swiper-button-next:after{
+    content: url('../img/slidenext2.png');
+}
+section.visual .swiper-button-next:hover:after{
+    content: url('../img/slidenext3.png');
+}
+section.visual .swiper-button-prev:after{
+    content: url('../img/slideprev2.png');
+}
+section.visual .swiper-button-prev:hover:after{
+    content: url('../img/slideprev3.png');
+}
+/* 해외 여행 섹션 */
+section.foreign .center_box{
+    width: 1440px;
+    height: 700px;
+    margin: 80px auto;
+    position: relative;
+}
+/* 버튼 */
+section.foreign .f_btn{
+    width: 310px;
+    height: 510px;
+    margin: 100px 0;
+    float: left;
+}
+section.foreign .f_btn ul li{
+    width: 310px;
+    height: 100px;
+    margin-bottom: 37px;
+}
+section.foreign .f_btn ul li:last-child{
+    margin: 0;
+}
+section.foreign .f_btn ul li a{
+    font-weight: bold;
+    font-size: 20px;
+    padding: 20px 0;
+    transition: all 0.5s;
+}
+section.foreign .f_btn ul li:nth-child(2) a{
+    padding: 35px 0;
+}
+section.foreign .f_btn ul .active a{
+    color: #4D96FF; /*나중에 색변경*/
+}
+/* 비디오 영역 */
+section.foreign .vdo{
+    width: 525px;
+    height: 700px;
+    overflow: hidden;
+    float: left;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+}
+section.foreign .vdo .vdo_box{
+    width: 5000px;
+    position: absolute;
+    left: 0;
+}
+section.foreign .vdo ul li{
+    float: left;
+}
+section.foreign .vdo iframe{
+    float: left;
+    width: 525px;
+    height: 700px;
+    object-fit: cover;
+}
+
+/* 설명영역 */
+section.foreign .explain{
+    width: 350px;
+    height: 510px;
+    float: right;
+    margin: 100px 0;
+    overflow: hidden;
+    position: relative;
+}
+section.foreign .explain ul li{
+    width: 350px;
+    height: 510px;
+    position: absolute;
+    top: 510px;
+}
+section.foreign .explain ul li:first-child{
+    position: absolute;
+    top: 0;
+}
+section.foreign .explain ul li img{
+    width: 80px;
+    position: absolute;
+    bottom: 0;
+    right: 10px;
+}
+section.foreign .explain h2{
+    font-size: 30px;
+    margin-bottom: 50px;
+
+}
+section.foreign .explain h3{
+    font-size: 25px;
+    margin-top: 10px;
+}
+section.foreign .explain ul li h4{
+    color: red;
+}
+section.foreign .explain ul li h4 strong{
+    font-size: 23px;
+}
+section.foreign .explain ul li p span{
+    background: linear-gradient(to top, #FFD93D 20%, transparent 50%);
+}
+section.foreign .explain ul li p{
+    font-size: 18px;
+}
+section.foreign .explain ul li > span{
+    display: block;
+    font-size: 18px;
+}
+/* 시드니 설명 */
+section.foreign .explain  ul .ex1 > span{
+    margin: 30px 0 30px 0;
+}
+/* 싱가포르 */
+section.foreign .explain ul.ex2 p{
+    margin-top: 100px;
+}
+section.foreign .explain ul .ex2 > span{
+    color: #555;
+    margin-top: 165px;
+}
+/* 사이판 */
+section.foreign .explain ul .ex3 h2 span{
+    color: #2e85ff; /*나중에 색변경*/
+}
+section.foreign .explain ul .ex3 p span{
+    position: absolute;
+    z-index: -1;
+    left: 0;
+    width: 0;
+    height: 26px;
+    transition: all 5s;
+}
+section.foreign .explain ul .ex3 .p1 span.active{
+    background: linear-gradient(to top, #BDFCC9 20%, transparent 50%);
+    width: 223px;
+}
+section.foreign .explain ul .ex3 .p2 span.active{
+    background: linear-gradient(to top, #BDFCC9 20%, transparent 50%);
+    width: 266px;
+}
+section.foreign .explain ul .ex3 .p3 span.active{
+    background: linear-gradient(to top, #BDFCC9 20%, transparent 50%);
+    width: 224px;
+}
+/* 핀란드 */
+section.foreign .explain ul .ex4 p span{
+    position: absolute;
+    z-index: -1;
+    left: 0;
+    width: 0;
+    height: 26px;
+    transition: all 5s;
+}
+section.foreign .explain ul .ex4 .p1 span.active{
+    background: linear-gradient(to top, #FAD9E6 20%, transparent 50%);
+    width: 262px;
+}
+section.foreign .explain ul .ex4 .p2 span.active{
+    background: linear-gradient(to top, #FAD9E6 20%, transparent 50%);
+    width: 151px;
+}
+section.foreign .explain ul .ex4 .p3 span.active{
+    background: linear-gradient(to top, #FAD9E6 20%, transparent 50%);
+    width: 182px;
+}
+section.foreign .explain .ex4 h3{
+    margin-top: 120px;
+}
+/* 테마 메뉴 영역 */
+section.theme{
+    width: 100%;
+    height: 810px;
+    margin: 80px 0;
+    background-color: #faf9f4;
+    position: relative;
+}
+section.theme .tab_slide{
+    width: 100%;
+    height: 100%;
+}
+section.theme .tab_slide .tab_title{
+    width: 600px;
+    margin: 0 auto;
+    margin-top: 40px;
+}
+section.theme .tab_slide .tab_title ul li{
+    width: 280px;
+    height: 50px;
+    background-color: #FFF56D;
+    float: left;
+    margin-left: 40px;
+    transition: all 0.5s;
+}
+section.theme .tab_slide .tab_title ul li:first-child{
+    margin-left: 0;
+}
+section.theme .tab_slide .tab_title ul li a{
+    font-size: 20px;
+    font-weight: bold;
+    text-align: center;
+    padding: 10px 0;
+}
+section.theme .tab_slide .tab_title ul li.active{
+    background-color: #FFD36E;
+}
+section.theme .tab_slide .tab_slide_con{
+    width: 100%;
+    float: left;
+    margin-top: 40px;
+    background-color: #ddd;
+}
+section.theme .tab_slide .tab_slide_con .tab_slide_list{
+    position: absolute;
+    width: 100%;
+    opacity: 0;
+    visibility: hidden;
+}
+section.theme .tab_slide .tab_slide_con .tab_slide_list.active{
+    opacity: 1;
+    visibility: visible;
+}
+section.theme .tab_slide .tab_slide_con .tab_slide_list .swiper{
+    width: 1280px;
+    height: 500px;
+    margin: 0 auto;
+}
+/* swiper 스크롤바 색상 변경 */
+section.theme .tab_slide .tab_slide_con .tab_slide_list .swiper .swiper-scrollbar-drag{
+    background-color: #fee540;
+}
+/* scrollbar 아래로 내리기 */
+section.theme .swiper-scrollbar{
+    bottom: -20px;
+}
+
+/* swiper슬라이드의 버튼 이미지 넣기 */
+section.theme .swiper{
+    overflow: visible;   
+}
+section.theme .swiper-button-next{
+    right: -40px;
+}
+section.theme .swiper-button-prev{
+    left: -40px;
+}
+section.theme .swiper-button-next:after{
+    content: url('../img/slidenext2.png');
+}
+section.theme .swiper-button-next:hover:after{
+    content: url('../img/slidenext3.png');
+}
+section.theme .swiper-button-prev:after{
+    content: url('../img/slideprev2.png');
+}
+section.theme .swiper-button-prev:hover:after{
+    content: url('../img/slideprev3.png');
+}
+
+/* 국내 여행 섹션 */
+section.korea .center_box{
+    width: 1440px;
+    height: 700px;
+    margin: 80px auto;
+    position: relative;
+}
+/* 버튼 */
+section.korea .k_btn{
+    width: 310px;
+    height: 510px;
+    margin: 100px 0;
+    float: right;
+}
+section.korea .k_btn ul li{
+    width: 310px;
+    height: 150px;
+    margin-bottom: 30px;
+}
+section.korea .k_btn ul li:last-child{
+    margin: 0;
+}
+section.korea .k_btn ul li a{
+    font-weight: bold;
+    font-size: 20px;
+    padding: 45px 0;
+    transition: all 0.5s;
+}
+section.korea .k_btn ul li:nth-child(2) a{
+    padding: 35px 0;
+}
+section.korea .k_btn ul .active a{
+    color: #6BCB77; /*나중에 색변경*/
+}
+/* 비디오 영역 */
+section.korea .vdo{
+    width: 525px;
+    height: 700px;
+    overflow: hidden;
+    float: left;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+}
+section.korea .vdo .vdo_box{
+    width: 5000px;
+    position: absolute;
+    left: 0;
+}
+section.korea .vdo ul li{
+    float: left;
+}
+section.korea .vdo iframe{
+    float: left;
+    width: 525px;
+    height: 700px;
+    object-fit: cover;
+}
+
+/* 설명영역 */
+section.korea .explain{
+    width: 350px;
+    height: 510px;
+    float: left;
+    margin: 100px 0;
+    overflow: hidden;
+    position: relative;
+}
+section.korea .explain ul li{
+    width: 350px;
+    height: 510px; 
+    position: absolute;
+    top: 510px;
+}
+section.korea .explain ul li:first-child{
+    top: 0;
+}
+section.korea .explain ul li img{
+    width: 80px;
+    position: absolute;
+    bottom: 0;
+    right: 10px;
+}
+section.korea .explain h2{
+    font-size: 30px;
+    margin-bottom: 50px;
+}
+section.korea .explain h3{
+    font-size: 25px;
+    margin-top: 10px;
+}
+section.korea .explain ul li h4{
+    color: red;
+}
+section.korea .explain ul li h4 strong{
+    font-size: 23px;
+}
+section.korea .explain ul li p{
+    font-size: 18px;
+}
+section.korea .explain ul li > span{
+    display: block;
+    font-size: 18px;
+}
+/* 제주도 설명 */
+section.korea .explain ul .ex1 p{
+    margin: 55px 0;
+}
+section.korea .explain  ul .ex1 p span{
+    color:#4D96FF; /*나중 색변경*/
+}
+/* 여수 설명 */
+section.korea .explain ul .ex2  h2 span{
+    background: linear-gradient(to top, #fee540 20%, transparent 50%);
+    /* 나중 색변경 */
+}
+section.korea .explain ul .ex2 p{
+    margin: 95px 0;
+}
+/* 예산 설명 */
+section.korea .explain ul .ex3 p{
+    margin:85px 0;
+}
+
+/* 자유여행 영역 */
+section.free{
+    width: 100%;
+    height: 720px;
+    margin: 80px 0;
+}
+section.free .center_box{
+    width: 1280px;
+    margin: 0 auto;
+}
+section.free h1{
+    font-size: 26px;
+    text-align: center;
+    margin-bottom: 62px;
+}
+section.free .freelist ul{
+    display: grid;
+    gap: 40px;
+    grid-template-columns: auto auto auto auto;
+}
+section.free .freelist ul li{
+    position: relative;
+}
+section.free .freelist ul li a{
+    width: 290px;
+    height: 290px;
+    margin: 0;
+    overflow: hidden;
+}
+section.free .freelist ul li .content{
+    width: 290px;
+    height: 290px;
+    background-color: rgba(0, 0, 0, 0.5);
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+section.free .freelist ul li .content p{
+    font-size: 24px;
+    font-weight: bold;
+    color: #fff;
+    margin: 50px 15px;
+}
+section.free .freelist ul li img{
+    transition: all 0.5s;
+}
+section.free .freelist ul li:hover img{
+    transform: scale(1.2,1.2);
+}
+
+
+/* 고객 여행기 영역 */
+section.review{
+    width: 100%;
+    height: 500px;
+    margin: 80px 0;
+    background-color: #faf9f4;
+}
+section.review .center_box{
+    width: 1440px;
+    margin: 0 auto;
+}
+section.review .tab_btn{
+    width: 340px;
+    height: 500px;
+    background-color: #fee540;
+    box-sizing: border-box;
+    padding: 130px 0 0 40px;
+    float: left;
+}
+section.review .tab_btn h2{
+    font-size: 24px;
+}
+section.review .tab_btn p{
+    font-size: 15px;
+    margin: 35px 0;
+}
+section.review .tab_btn a{
+    font-size: 18px;
+    font-weight: bold;
+    border: 1px solid #333;
+    width: 150px;
+    height: 50px;
+    line-height: 50px;
+    box-sizing: border-box;
+    padding-left:45px;
+}
+section.review .photo{
+    width: 300px;
+    float: left;
+    margin: 100px 20px 0 80px;
+}
+section.review .content{
+    width: 700px;
+    height: 500px;
+    float: right;
+}
+section.review .content h3{
+    font-size: 18px;
+    color: #666;
+    margin: 50px 10px;
+}
+section.review .content h2{
+    font-size: 26px;
+    margin: 10px;
+}
+section.review .content p{
+    font-size: 16px;
+    margin: 50px 10px;
+}
+section.review .content a{
+    float: right;
+    font-size: 20px;
+    color: #666;
+    font-weight: bold;
+    margin-top: 30px;
+}
+section.review .content hr{
+    border: 0;
+    border-bottom: 3px solid #ccc;
+}
+
+/* 이벤트 홈쇼핑 영역 */
+section.banner{
+    width: 100%;
+    height: 500px;
+    margin: 80px 0;
+}
+section.banner .center_box{
+    width: 1280px;
+    margin: 0 auto;
+}
+section.banner .event{
+    width: 620px;
+    float: left;
+}
+section.banner h1{
+    text-align: center;
+    font-size: 26px;
+}
+section.banner  .center_box > div > a{
+    float: right;
+    font: 12px;
+    margin-top: 17px;
+}
+section.banner .event .e_banner{
+    width: 620px;
+    height: 400px;
+    float: left;
+    margin-top: 22px;
+}
+section.banner .event .e_banner a{
+    height: 400px;
+}
+section.banner .homeshopping{
+    width: 620px;
+    float: right;
+}
+section.banner .homeshopping > div{
+    width: 100%;
+    height: 400px;
+    float: left;
+    margin-top: 17px;
+}
+section.banner .homeshopping .h_banner{
+    margin-top: 22px;
+}
+section.banner .homeshopping .gs{
+    width: 300px;
+    height: 400px;
+    float: left;
+    border: 2px solid #ccc;
+}
+section.banner .homeshopping .h_banner .gs_logo{
+    width: 140px;
+    margin: 20px auto;
+}
+section.banner .homeshopping .h_banner hr{
+    width: 30%;
+    margin: 0 auto;
+    border: 0;
+    border-bottom: 3px solid #ccc;
+}
+section.banner .homeshopping .h_banner p{
+    font-size: 14px;
+    color: blue;
+    text-align: center;
+    margin: 10px 0;
+}
+section.banner .homeshopping  div  a > img{
+    width: 200px;
+    margin:10px 50px;
+}
+section.banner .homeshopping h3 {
+    text-align: center;
+    font-size: 18px;
+}
+section.banner .homeshopping .lotte{
+    width: 300px;
+    height: 400px;
+    float: right;
+    border: 2px solid #ccc;
+}
+section.banner .homeshopping .lotte .lotte_logo{
+    width: 150px;
+    margin: 20px auto;
+}
+
+/* section.last 영역 */
+section.last{
+    width: 100%;
+    height: 300px;
+    margin: 80px 0;
+}
+section.last .ad_box{
+    width: 50%;
+    height: 300px;
+    float: left;
+    background-color: #faf9f4;
+}
+section.last .advice{
+    width: 640px;
+    float: right;
+}
+section.last .advice img{
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 65px;
+    margin-bottom: 10px;
+    
+}
+section.last .advice h2{
+    font-size: 16px;
+    text-align: center;
+}
+section.last .advice p{
+    color: #FF6B6B;
+    font-size: 20px;
+    text-align: center;
+    font-weight: bold;
+}
+section.last .advice .carrier{
+    width: 320px;
+    float: left;
+    border-right: 4px solid #ddd;
+    margin: 89px 0;
+}
+section.last .advice .airplain{
+    width: 320px;
+    float: right;
+    margin: 90px 0;
+}
+section.last .appbox{
+    width: 640px;
+    height: 300px;
+    float: left;
+}
+section.last .app{
+    width: 350px;
+    margin: 80px auto 0;
+}
+section.last .app h1{
+    font-size: 28px;
+    margin-bottom: 30px;
+}
+section.last .app ul li{
+    width: 150px;
+    height: 50px;
+    border: 1px solid #aaa;
+    float: left;
+    margin-right: 10px;
+    position: relative;
+}
+section.last .app ul li a{
+    color: #aaa;
+    line-height: 50px;
+    padding: 0 20px;
+}
+section.last .app ul li a:after{
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 0;
+    background-color: #FF6B6B;
+    transition: all 0.5s;
+    z-index: -1;
+}
+section.last .app ul li:hover a:after{
+    height: 100%;
+}
+section.last .app ul li:hover a{
+    color: #fff;
+}
+
+/* 푸터 */
+footer{
+    height: 150px;
+}
+footer .center_box{
+    width: 1760px;
+    margin: 0 auto;
+}
+footer .info_box{
+    width: 100%;
+    float: left;
+}
+footer .info{
+    float: left;
+}
+footer .info li{
+    float: left;
+    margin-right: 40px;
+}
+footer .info li a{
+    font-size: 16px;
+    font-weight: bold;
+}
+footer .info li:nth-child(3) a{
+    color:#2e85ff;
+}
+footer .sns{
+    float: right;
+}
+footer .sns li{
+    float: left;
+    margin-left: 10px;
+}
+footer .sns li a{
+    width: 50px;
+    height: 50px;
+}
+footer .f_logo{
+    width: 150px;
+    float: left;
+    margin: 28px 0; 
+    margin-right: 30px;
+}
+footer address{
+    float: left;
+    font-size: 16px;
+    color: #999;
+    margin: 16px 0;
+    font-style: normal;
+}
+/* 패밀리사이트 */
+footer .family{
+    float: right;
+    width: 200px;
+    height: 30px;
+    margin: 35px 20px;
+    border-bottom: 1px solid #333;
+    position: relative;
+}
+footer .family span{
+    width: 10px;
+    float: right;
+}
+footer .family img{
+    width: 15px;
+    float: right;
+    margin-top: 8px
+}
+footer .family .fa_con{
+    width: 200px;
+    display: none;
+    background-color: #fee540;
+    position: absolute;
+    bottom: 0;
+}
+footer .family .fa_con ul li{
+    width: 200px;
+    height: 30px;
+    border-bottom: 1px solid #fff;
+}
+footer .family .fa_con img{
+    position: absolute;
+    bottom: 10px;
+    right: 0;
+}
+/* 탑버튼 */
+.top{
+    position: fixed;
+    width: 80px;
+    height: 80px;
+    background-color: #f4f4f4;
+    text-align: center;
+    font-size: 14px;
+    line-height: 80px;
+    right: 0;
+    bottom: 15px;
+    cursor: pointer;
+    z-index: 800;
+    transition: all 0.5s;
+}
+.top.active{
+    bottom: 150px;
+    right: 0;
+}
+.top.active2{
+    opacity: 0;
+    z-index: -100;
+}
+
+
+/* 전체 메뉴 창*/
+body.active{
+    /* position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden; */
+    /* 위 코드처럼해도되고 아래 코드로도 가능
+    위 코드처럼하면 scrollTop이 0이되지만 많은 nav를 만들수 있고, 아래코드로하면 클릭한 스크롤에 전체메뉴가 나오지만 전체메뉴에 스크롤이 없어져서 많은 nav를 만들수없다. */
+    overflow-y: hidden;
+}
+.site{
+    width: 100%;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 100%;
+    z-index: 1000;
+    background-color: #fff;
+}
+.site .closebtn{
+    width: 20px;
+    position: absolute;
+    top: 100px;
+    right: 80px;
+}
+.site .site_left{
+    width: 700px;
+    height: 100%;
+    float: left;
+    position: relative;
+}
+.site .site_left .site_menu{
+    position: absolute;
+    z-index: 1100;
+    top: 150px;
+    left: 70px;
+}
+.site .site_left .site_menu > ul > li{
+    width: 100%;
+    float: left;
+    position: relative;
+    margin-top: 20px;
+}
+.site .site_left .site_menu > ul > li > a{
+    font-size: 40px;
+    font-weight: bold;
+    float: left;
+    color: #aaa;
+}
+.site .site_left .site_menu > ul > li > a.active{
+    color: #fff;
+}
+.site .site_left .site_menu > ul > li > p{
+    float: left;
+    width: 0;
+    height: 2px;
+    background-color: #fff;
+    margin: 35px 20px 0;
+    transition: all 0.5s;
+}
+.site .site_left .site_menu > ul > li > p.line1.active{
+    width: 30px;
+}
+.site .site_left .site_menu > ul > li > p.line2.active{
+    width: 30px;
+}
+.site .site_left .site_menu > ul > li > p.line3.active{
+    width: 90px;
+}
+.site .site_left .site_menu > ul > li > p.line4.active{
+    width: 140px;
+}
+.site .site_left .site_menu > ul > li > .sub{
+    display: none;
+    position: absolute;
+    top: 12px;
+    left: 360px;
+    z-index: 1100;
+}
+.site .site_left .site_menu .sub li a{
+    color: #fff;
+    padding: 10px;
+}
+.site .site_left .site_bg ul li{
+    width: 700px;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+.site .site_left .site_bg ul .bg1{
+    background-image: url(../img/totalpage1.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.site .site_left .site_bg ul .bg2{
+    background-image: url(../img/totalpage2.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.site .site_left .site_bg ul .bg3{
+    background-image: url(../img/totalpage3-1.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.site .site_left .site_bg ul .bg4{
+    background-image: url(../img/totalpage4.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.site .site_left .site_bg .dark_bg{
+    width: 700px;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+.site .site_right{
+    /* 코드는 맞으나 적용이 안됨. js로 범위 설정함 */
+    /* width: calc(100%-700px); */
+    width: 1200px;
+    height: 100%;
+    padding: 100px 0 0 80px;
+    background-color: #fff;
+    float: left;
+}
+.site .site_right .site_nav{
+    width: 100%;
+    float: left;
+    margin-top: 50px;
+}
+.site .site_right .site_nav > ul > li {
+    float: left;
+    width: 300px;
+    height: 200px;
+}
+.site .site_right .site_nav > ul > li > a{
+    font-size: 24px;
+    margin-bottom:10px ;
+}
+.site .site_right .site_nav .sub li a{
+    font-size: 16px;
+    color: #555;
+    transition: all 0.5s;
+}
+.site .site_right .site_nav .sub li:hover a{
+    color: #2e85ff;
+}
+.site .site_right .site_banner ul li{
+    float: left;
+    margin-right: 30px;
+}
